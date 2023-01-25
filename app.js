@@ -175,7 +175,7 @@ const app = new App({
   port: process.env.PORT || 3000,
 });
 
-app.message(async ({ message, say }) => {
+app.message("MVP", async ({ message, say }) => {
   await say({
     blocks: [
       {
