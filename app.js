@@ -10,7 +10,7 @@ const app = new App({
   port: process.env.PORT || 3000
 })
 
-app.message("MVP", async ({ message, say }) => {
+app.message("MVP", async ({ say }) => {
   await say({
     blocks: [
       {
@@ -205,7 +205,7 @@ app.action("question", async ({ body, ack, say, client }) => {
   const [question] = questions[body?.actions[0]?.selected_option?.value].sort(
     () => Math.random() - 0.5
   );
-  console.log(body?.actions[0]?.selected_option?.value, question);
+
   await say({
     blocks: [
       {
